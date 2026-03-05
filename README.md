@@ -26,15 +26,3 @@ Database
 - Contact Form
 - Blog Section
 
-## 📸 Screenshots
-
-### Home Page
-![Home Page](image-2.png)
-
-### Login Page
-![Login Page](image-1.png)
-
-### Property Listing
-![alt text](image-3.png)
-![alt text](image-4.png)
-
