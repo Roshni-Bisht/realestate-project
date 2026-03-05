@@ -1,0 +1,103 @@
+/* --- HERO SECTION STYLES --- */
+
+/* 1. Full Page Cover & Background Image */
+.hero-section {
+    /* Use 'calc(100vh - Xpx)' to ensure it covers the screen 
+       while accounting for a fixed header/nav bar if you have one. 
+       If you don't have a fixed header, use 100vh. */
+    min-height: calc(100vh - 80px); 
+    width: 100%;
+    
+    /* !!! PLACE YOUR BACKGROUND IMAGE URL HERE !!! 
+       Use your local asset path, e.g., url('../assets/hero-background.jpg') 
+       The URL below is a placeholder. 
+    */
+  background-image: url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1400&q=80&auto=format&fit=crop");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+/* 2. Semi-Transparent Overlay (Darkens the image so text stands out) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% opaque black overlay */
+}
+
+/* 3. Content Centering and Appearance */
+.hero-content {
+    z-index: 10; /* Ensures content is above the overlay */
+    position: relative; /* Needed for z-index to work correctly */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* 4. Search Form Styling */
+.hero-content .form-select,
+.hero-content .form-control {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white fields */
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: #333;
+}
+
+/* 5. Light Blue Search Button */
+.btn-search-blue {
+    /* Light Blue accent color: #3ABFF8 */
+    background-color: #3ABFF8 !important; 
+    border-color: #3ABFF8 !important;
+    color: #FFF !important;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.btn-search-blue:hover,
+.btn-search-blue:focus {
+    background-color: #0077c8 !important; /* Slightly darker blue on hover */
+    border-color: #0077c8 !important;
+    box-shadow: none;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Make form elements stack on small screens */
+    .hero-content .row > div {
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+
+
+

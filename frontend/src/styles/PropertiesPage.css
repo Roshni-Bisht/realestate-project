@@ -1,0 +1,39 @@
+.map-properties-container {
+  display: flex;
+  height: 100vh;
+}
+
+.map-container {
+  flex: 1.2;
+  position: sticky;
+  top: 0;
+}
+
+.properties-list {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.property-card {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.property-image {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.property-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

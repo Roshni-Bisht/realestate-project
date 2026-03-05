@@ -1,0 +1,15 @@
+# Python
+env/
+__pycache__/
+*.pyc
+db.sqlite3
+
+# Node
+node_modules/
+
+# Media
+media/
+
+# OS
+.DS_Store
+Thumbs.db

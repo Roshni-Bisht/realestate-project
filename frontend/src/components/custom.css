@@ -1,0 +1,91 @@
+/* src/custom.css (example) */
+:root {
+  --bs-luxury-dark: #111111;
+  --bs-luxury-accent: #C6A76E;
+}
+
+.bg-luxury-dark {
+  background-color: var(--bs-luxury-dark) !important;
+}
+.text-luxury-accent {
+  color: var(--bs-luxury-accent) !important;
+}
+.border-luxury-accent {
+  border-color: var(--bs-luxury-accent) !important;
+}
+/* src/custom.css (Ensure these classes are present and correct) */
+
+/* --- GLOBAL ACCENT COLORS --- */
+:root {
+  --primary-blue: #007bff; 
+  --btn-blue-bg: #007bff;
+}
+.text-accent-blue {
+    color: var(--primary-blue) !important;
+}
+.bg-accent-blue {
+    background-color: var(--primary-blue) !important;
+}
+
+/* --- CONTACT FORM SPECIFIC STYLES --- */
+
+/* Form Container Styling (Black Background) */
+.contact-form-container {
+    background-color: #000;
+    padding: 40px;
+    color: white;
+    height: 100%; 
+    min-height: 765px; /* Ensures the form box matches the map height */
+}
+
+/* Custom styling for ALL inputs, selects, and textareas */
+.custom-form-input {
+    background-color: #000 !important; /* Pure black background for input fields */
+    border: 1px solid white !important; /* White border */
+    color: white !important;
+    border-radius: 0 !important; /* Square corners */
+    height: 50px !important; /* Consistent height for fields */
+    box-shadow: none !important; /* Remove focus shadow */
+    font-size: 1rem;
+}
+
+/* Fix for placeholder text color */
+.custom-form-input::placeholder {
+    color: #ccc !important;
+    opacity: 1; 
+}
+
+/* Fix for Select dropdown arrow color on dark background */
+.custom-form-input:not([type]):not(.form-control) { 
+    /* This targets the <select> element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+}
+
+/* Styling for the selector headers ("How did you find us?") */
+.form-selector-header {
+    background-color: var(--primary-blue) !important; /* Blue background */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 0;
+}
+
+/* Styling for the selection boxes ("Word of Mouth", "Sale") */
+.form-selector-option {
+    background-color: #333 !important; /* Dark grey background */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* --- END CONTACT FORM STYLES --- */

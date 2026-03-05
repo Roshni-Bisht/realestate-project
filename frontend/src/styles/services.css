@@ -1,0 +1,176 @@
+/* src/styles/services.css */
+
+/* =========================================
+   1. Global Container and Background (LIGHT THEME)
+   ========================================= */
+
+.services-section-container {
+    background-color: #F9FAFB; /* Light background */
+    color: #1F2937; /* Dark text */
+    padding: 80px 5%; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* =========================================
+   2. Header Styling
+   ========================================= */
+
+.services-header {
+    margin-bottom: 50px;
+}
+
+.services-title {
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Specific styling for the 'Our' part to get the highlight effect */
+.title-highlight {
+    color: #3ABFF8; /* Light Blue accent color for 'Our' */
+}
+
+.services-tagline {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #6B7280; /* Slightly lighter dark text for tagline */
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3ABFF8; /* Light Blue line */
+}
+
+/* =========================================
+   3. Cards Wrapper (Desktop Layout)
+   ========================================= */
+
+.services-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   4. Individual Card Styling
+   ========================================= */
+
+.service-card {
+    flex: 1 1 30%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    /* Adjusted shadow for light background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-image:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* =========================================
+   5. Button Styling
+   ========================================= */
+
+.learn-more-btn {
+    background-color: #3ABFF8; /* Light Blue button color */
+    color: #FFFFFF; /* White text for contrast on blue */
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+    border-radius: 4px; 
+    align-self: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more-btn:hover {
+    background-color: #0077c8; /* Slightly darker blue on hover */
+}
+
+/* =========================================
+   6. WhatsApp Floating Button (Basic example - kept green)
+   ========================================= */
+
+.whatsapp-float-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for visibility on light bg */
+    text-decoration: none;
+}
+
+/* =========================================
+   7. Responsiveness (Mobile/Tablet)
+   ========================================= */
+
+@media (max-width: 992px) {
+    .services-cards-wrapper {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .service-card {
+        flex: 1 1 45%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-section-container {
+        padding: 40px 20px;
+    }
+    
+    .services-title {
+        font-size: 2.5em;
+    }
+
+    .services-tagline {
+        font-size: 1em;
+    }
+    
+    .services-cards-wrapper {
+        flex-direction: column;
+    }
+    
+    .service-card {
+        flex: 1 1 100%;
+    }
+}

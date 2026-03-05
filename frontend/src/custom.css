@@ -1,0 +1,105 @@
+/* src/custom.css (Add these styles) */
+
+/* Force Navbar background to white/light and ensure links are dark */
+.custom-navbar-light {
+    background-color: white !important;
+    border-bottom: 1px solid #eee; /* Optional: adds a slight line below the navbar */
+}
+
+/* Style for all regular Nav.Links and the NavDropdown titles */
+.nav-link-color, 
+.custom-navbar-light .navbar-nav .nav-link,
+.custom-navbar-light .navbar-nav .nav-link.active,
+.custom-navbar-light .navbar-nav .nav-link:hover,
+.custom-navbar-light .dropdown-toggle {
+    /* Set link color to black/dark for light navbar */
+    color: #333 !important; 
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    margin: 0 5px; /* Adjust spacing between links */
+}
+
+/* Ensure the NavDropdown titles stay dark on hover/active states */
+.custom-navbar-light .dropdown-toggle:hover {
+    color: #000 !important; 
+}
+
+/* Custom styling for the accent button */
+.custom-accent-btn {
+    /* Using the sky-blue-green color defined in the JS component */
+    color: white !important;
+    border-radius: 5px !important;
+    /* Optional: shadow to make it pop like the reference image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+/* --- CONTACT FORM SPECIFIC STYLES --- */
+
+/* 1. Form Container Styling (Black Background + Orange Left Border) */
+.contact-form-container {
+    background-color: #000;
+    padding: 40px;
+    color: white;
+    height: 100%;
+    min-height: 765px; 
+    border-left: 10px solid var(--primary-accent) !important; /* ORANGE left border */
+}
+
+/* 2. Custom styling for ALL inputs, selects, and textareas */
+.custom-form-input {
+    background-color: #000 !important; /* Forces black background */
+    border: 1px solid white !important; /* Forces white border */
+    color: white !important; /* Forces white text */
+    border-radius: 0 !important; /* Square corners */
+    height: 50px !important; /* Standard height */
+    box-shadow: none !important; 
+    font-size: 1rem;
+}
+.custom-form-input:focus {
+    background-color: #000 !important;
+    border-color: #fff !important;
+}
+
+/* 3. Placeholder Fix */
+.custom-form-input::placeholder {
+    color: #ccc !important;
+    opacity: 1; 
+}
+
+/* 4. Select Dropdown Arrow Fix (White arrow on black background) */
+.custom-form-input:not([type]):not(.form-control) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+}
+
+/* 5. Selector Headers (Dark Grey Bar) */
+.form-selector-header {
+    background-color: var(--input-dark-grey) !important; /* Dark grey bar */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0;
+}
+/* Wrapper to fix the height of the entire section on the screen */
+.contact-map-wrapper-reduced {
+    /* Reduced viewport height to ensure it fits above the fold */
+    height: 70vh; 
+    min-height: 550px; /* Adjust min height for small screens */
+    padding: 20px 0; /* Reduced vertical padding */
+}
+
+/* Ensure inner columns take up the full height */
+.h-100 {
+    height: 100% !important;
+}
+
+/* Map container must also fill its column height */
+.map-embed-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
