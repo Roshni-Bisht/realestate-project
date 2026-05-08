@@ -47,14 +47,33 @@ const HeroSection = () => {
             </select>
           </div>
 
-          <div className="col-md-3">
+          {/* <div className="col-md-3">
             <input
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               className="form-control"
               placeholder="Location"
             />
-          </div>
+          </div> */}
+
+          <div className="col-md-3">
+  <select
+    className="form-select"
+    value={location}
+    onChange={(e) => setLocation(e.target.value)}
+  >
+    <option value="" disabled>
+  Select Location
+</option>
+    <option>Delhi</option>
+    <option>Mumbai</option>
+    <option>Bangalore</option>
+    <option>Noida</option>
+    <option>Gurgaon</option>
+    <option>Pune</option>
+    <option>Hyderabad</option>
+  </select>
+</div>
 
           <div className="col-md-1 d-grid">
             <button type="submit" className="btn btn-primary btn-search-blue">
