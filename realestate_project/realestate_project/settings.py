@@ -12,7 +12,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 SECRET_KEY = 'django-insecure-hk5)&$%zzlq(rjzq7r6x@5ab=qry1fa)&-djjc^w)1a-z8%jb5'
 DEBUG = True
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com']
 
 # --------------------------
 # Installed Apps
@@ -116,7 +117,7 @@ USE_TZ = True
 # Static files
 # --------------------------
 STATIC_URL = 'static/'
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # --------------------------
 # Media files
 # --------------------------
