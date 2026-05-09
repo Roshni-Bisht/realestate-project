@@ -26,3 +26,5 @@ tzdata==2025.2
 # Optional utility (safe)
 python-dateutil==2.9.0.post0
 six==1.17.0
+
+Pillow==11.0.0
